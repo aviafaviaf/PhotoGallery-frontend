@@ -81,7 +81,7 @@ export default function PhotoDetails() {
       <h1 className="text-3xl text-center font-bold mb-4">{photo.title}</h1>
       
       <img
-        src={`http://localhost:5000${photo.url}`}
+        src={`${process.env.REACT_APP_API_URL}${photo.url}`}
         alt={photo.title}
         className="w-full max-h-[600px] object-contain mb-2"
       />

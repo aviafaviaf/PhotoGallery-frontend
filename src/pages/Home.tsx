@@ -93,7 +93,7 @@ export default function Home() {
           <div key={photo.id} className="border rounded shadow text-center">
             <Link to={`/photos/${photo.id}`}>
               <img
-                src={`http://localhost:5000${photo.url}`}
+                src={`${process.env.REACT_APP_API_URL}${photo.url}`}
                 alt={photo.title}
                 className="w-full h-60 object-contain mx-auto rounded-t bg-gray-100"
               />
