@@ -95,7 +95,7 @@ export default function UserPage() {
               <div key={photo.id} className="border rounded p-2 shadow text-center">
                 <Link to={`/photos/${photo.id}`}>
                 <img
-                  src={`${process.env.REACT_APP_API_URL}${photo.url}`}
+                  src={photo.url}
                   alt={photo.title}
                   className="w-full h-60 object-contain bg-gray-100 rounded-t"
                 />

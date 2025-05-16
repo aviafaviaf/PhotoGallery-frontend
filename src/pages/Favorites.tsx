@@ -81,7 +81,7 @@ export default function Favorites() {
               <div key={photo.id} className="rounded shadow bg-white p-2">
                 <Link to={`/photos/${photo.id}`}>
                 <img
-                  src={`${process.env.REACT_APP_API_URL}${photo.url}`}
+                  src={photo.url}
                   alt={photo.title}
                   className="w-full h-60 object-contain mx-auto rounded-t bg-gray-100"
                 />
