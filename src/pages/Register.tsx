@@ -8,8 +8,16 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!emailRegex.test(email)) {
+      alert('Введите корректный email');
+      return;
+    }
+
     try {
       await api.post('/auth/register', { email, username, password });
       navigate('/login');
